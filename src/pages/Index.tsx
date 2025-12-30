@@ -4,14 +4,24 @@ import FeaturesSection from "@/components/FeaturesSection";
 import LogoSection from "@/components/LogoSection";
 import WhySection from "@/components/WhySection";
 import Footer from "@/components/Footer";
-
+import ClickSpark from '@/components/Animations/ClickSpark';
 
 const Index = () => {
   return (
      <> 
   
       <div className="min-h-screen bg-background">
-     
+      
+
+ <ClickSpark
+  sparkColor='#786401ff'
+  sparkSize={10}
+  sparkRadius={15}
+  sparkCount={8}
+  duration={400}
+>
+  {/* Your content here */}
+
      <div className="relative z-10">
       <Navbar />
       <main>
@@ -23,6 +33,7 @@ const Index = () => {
       </main>
       <Footer />
     </div>
+    </ClickSpark>
      </div>
    
      </>
