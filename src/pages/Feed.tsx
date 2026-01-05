@@ -282,17 +282,7 @@ const Feed = () => {
                 <FeedSidebar activeChannel={activeChannel} onChannelSelect={(id) => { setActiveChannel(id); setShowActivities(false); setIsMobileMenuOpen(false); }} />
               </div>
               <div className="p-4 border-t border-border/40 space-y-2">
-                <button
-                  onClick={() => {
-                    setShowActivities(true);
-                    setActiveChannel(null);
-                    setIsMobileMenuOpen(false);
-                  }}
-                  className={`flex items-center gap-3 w-full px-4 py-3 rounded-xl transition-colors ${showActivities ? "bg-primary/10 text-primary" : "hover:bg-secondary/50 text-muted-foreground"}`}
-                >
-                  <Activity className="w-5 h-5" />
-                  <span className="font-medium">Your Activities</span>
-                </button>
+               
                 <button
                   onClick={() => navigate("/")}
                   className="flex items-center gap-3 w-full px-4 py-3 rounded-xl hover:bg-destructive/10 hover:text-destructive transition-colors text-muted-foreground"

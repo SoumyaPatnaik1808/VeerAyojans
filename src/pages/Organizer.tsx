@@ -370,7 +370,7 @@ const Organizer = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setShowActivities(true)}
-            className="absolute bottom-8 right-8 z-50 flex items-center gap-2 px-5 py-3 rounded-full bg-primary text-primary-foreground shadow-lg hover:shadow-xl transition-all"
+            className="hidden md:flex absolute bottom-8 right-8 z-50 items-center gap-2 px-5 py-3 rounded-full bg-primary text-primary-foreground shadow-lg hover:shadow-xl transition-all"
           >
             <Activity className="w-5 h-5" />
             <span className="font-medium">Your Activities</span>
@@ -407,10 +407,6 @@ const Organizer = () => {
                 <FeedSidebar activeChannel={activeChannel} onChannelSelect={(id) => { setActiveChannel(id); setShowActivities(false); setIsMobileMenuOpen(false); }} />
               </div>
               <div className="p-4 border-t border-border/40 space-y-2">
-                <button onClick={() => { setShowActivities(true); setActiveChannel(null); setIsMobileMenuOpen(false); }} className={`flex items-center gap-3 w-full px-4 py-3 rounded-xl transition-colors ${showActivities ? "bg-primary/10 text-primary" : "hover:bg-secondary/50 text-muted-foreground"}`}>
-                  <Activity className="w-5 h-5" />
-                  <span className="font-medium">Your Activities</span>
-                </button>
                 <button onClick={() => navigate("/")} className="flex items-center gap-3 w-full px-4 py-3 rounded-xl hover:bg-destructive/10 hover:text-destructive transition-colors text-muted-foreground">
                   <LogOut className="w-5 h-5" />
                   <span className="font-medium">Logout</span>
