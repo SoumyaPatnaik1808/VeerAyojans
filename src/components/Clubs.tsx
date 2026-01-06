@@ -190,7 +190,11 @@ function Clubs() {
       src: "./Assets/Yoga.jpeg",
     },
   ];
-  return <AnimatedCards testimonials={testimonials} />;
+  return (
+    <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <AnimatedCards testimonials={testimonials} />
+    </div>
+  );
 }
 
 export { Clubs };

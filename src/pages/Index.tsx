@@ -34,7 +34,7 @@ const Index = () => {
                 <WhySection />
               </div>
           </main>
-          <Footer />
+         
         </div>
       </ClickSpark>
     </div>
